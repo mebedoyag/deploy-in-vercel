@@ -4,7 +4,7 @@ const path = require('path');
 
 router.get('/', (req, res) => {
   try {
-    const dirPath = path.join(__dirname, '/index.html');
+    const dirPath = path.join(__dirname, '/main.html');
     res.sendFile(dirPath);
   } catch (error) {
     
