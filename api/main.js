@@ -7,6 +7,9 @@ router.get('/', (req, res) => {
     const dirPath = path.join(__dirname, '/main.html');
     res.sendFile(dirPath);
   } catch (error) {
-    
+    console.log(error);
+    return res.status(500).send("Serve error");
   }
 })
+
+module.exports = router;
