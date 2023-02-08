@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 8080;
 
 // app.use(express.json({extended: false}));
 
+app.use("/", main);
 app.use("/api/product", product);
 
 app.listen(PORT, () => {
