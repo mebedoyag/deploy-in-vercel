@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get("/", (req, res) => {
   try {
-    res.json({
-      status: 200,
-      message: "Get data succesfully"
-    })
+    const dirPath = path.join(__dirname, '/about.html');
+    res.sendFile(dirPath);
   } catch (error) {
     console.log(error);
     return res.status(500).send("Serve error");
